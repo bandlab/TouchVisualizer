@@ -44,8 +44,7 @@ final public class Visualizer:NSObject {
     }
     
     @objc internal func orientationDidChangeNotification(_ notification: Notification) {
-        let instance = Visualizer.sharedInstance
-        for touch in instance.touchViews {
+        for touch in touchViews {
             touch.removeFromSuperview()
         }
     }
